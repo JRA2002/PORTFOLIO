@@ -22,40 +22,46 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Python,
   },
+
 }
 const PROJECTS = [
+{
+  title: "SmartHome Manager - Aplicación web para la gestión de propiedades",
+  description: `
+- Backend desarrollado con FastAPI y PostgreSQL desplegados en Render.
+
+- Frontend creado con Next.js y Tailwind CSS, desplegado en Vercel.
+
+- Gestión completa de propiedades, alquileres y gastos.
+
+- OCR con IA para leer y procesar facturas automáticamente.
+
+- Chatbot inteligente integrado para asistencia y consultas dentro de la plataforma.
+  `,
+  link: "https://smarthome-manager.vercel.app/",
+  github: "https://github.com/JRA2002/SMARTHOME_MANAGER",
+  image: "/projects/smarthome.png",
+  tags: [TAGS.NEXT, TAGS.PYTHON]
+}
+,
   {
-    title: "Web App - Aplicación web para la gestion de propiedades",
-    description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.PYTHON],
-  },
-  {
-    title: "DjangoHappy - Aprende a progrmar en Django",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Pygame - Un juego de Python",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "Algo de AI",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    title: "TinderPet - Conoce a tu mascota ideal",
+    description: `
+• Frontend desarrollado con Next.js y Tailwind CSS (deploy en Vercel).
+
+• Backend construido en Django + Django REST Framework (deploy en PythonAnywhere).
+
+• Autenticación segura usando JWT.
+
+• Base de datos MySQL para almacenamiento de usuarios, mascotas y solicitudes.
+
+• Sistema de “match” estilo Tinder para conectar adoptantes con mascotas compatibles.
+`,
+
+    link: "https://tinderpet-app.vercel.app/",
+    github: "https://github.com/JRA2002/TINDERPET_APP",
+    image: "/projects/tinder1.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.PYTHON]
   },
 ]
 ---
@@ -86,7 +92,7 @@ const PROJECTS = [
             ))}
           </ul>
 
-          <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+          <div class="mt-2 text-gray-700 dark:text-gray-400 whitespace-pre-line">{description}</div>
           <footer class="flex items-end justify-start mt-4 gap-x-4">
             {github && (
               <LinkButton href={github}>
